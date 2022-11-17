@@ -155,9 +155,9 @@ class CustomerController extends Controller
 
             $member = Customer::find($member);
 
-            $message = "Dear ".$member->name;
+            $message = "Dear ".$member->name.", ";
 
-            $message .= '\n'.$request->compose_message;
+            $message .= $request->compose_message;
 
             Customer::pushBulk_SMS($member->phone_number,$message);
 
