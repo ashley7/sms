@@ -28,6 +28,8 @@ class Customer extends Model
 
         }
 
+        $phone_number = str_replace(" ","",$phone_number);
+
         return $phone_number;
 
     }
