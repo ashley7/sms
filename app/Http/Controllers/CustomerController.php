@@ -177,7 +177,7 @@ class CustomerController extends Controller
         $user->phone_number = str_replace(" ","",$member->phone_number);
 
         $user->save();
-        
+
        }
     }
 }
