@@ -164,7 +164,20 @@ class CustomerController extends Controller
         }
 
         return back();
+    }
 
+    public function cleanPhone()
+    {
+       $members = Customer::get();
 
+       foreach($members as $member){
+
+        $user = Customer::find($member->id);
+
+        $user->phone_number = str_replace(" ","",$member->phone_number);
+
+        $user->save();
+        
+       }
     }
 }

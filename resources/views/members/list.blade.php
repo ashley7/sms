@@ -14,7 +14,7 @@
             <div class="card">              
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table">
+                        <table class="table" id="myTable">
                             <thead>
                                 <th>Name</th>
                                 <th>Phone</th>
@@ -89,7 +89,13 @@
 @push('scripts')
   <script>
      $("#group").chosen({width: "100%"}); 
+
+     $(document).ready( function () {
+    $('#myTable').DataTable();
+} );
   </script>
+
+  
 
 <script type="text/javascript">
     

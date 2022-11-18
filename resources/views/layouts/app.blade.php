@@ -18,6 +18,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="//cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -80,6 +81,7 @@
       <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}"></script>    
         <script src="{{ asset('js/choosen.js') }}"></script>
+        <script src="//cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
         @stack('scripts')
 </body>
 </html>
