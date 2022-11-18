@@ -13,32 +13,34 @@
             <hr>
             <div class="card">              
                 <div class="card-body">
-                <table class="table">
-                    <thead>
-                        <th>Name</th>
-                        <th>Phone</th>
-                        <th>Group</th>
-                        <th>Action</th>
-                    </thead>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <th>Name</th>
+                                <th>Phone</th>
+                                <th>Group</th>
+                                <th>Action</th>
+                            </thead>
 
-                    <tbody>
-                        @foreach($members as $member)
-                            <tr>
-                                <td>{{$member->name}}</td>
-                                <td>{{$member->phone_number}}</td>
-                                <td>{{$member->group}}</td>
-                                <td>
-                                    <form method="POST" action="{{route('members.destroy',$member->id)}}">
-                                        @csrf 
-                                        {{method_field('DELETE')}}
-                                        <a href="{{route('members.edit',$member->id)}}" class="badge badge-primary p-1">Edit</a>
-                                        <button type="submit" class="badge badge-danger p-1">Delete</button>
-                                    </form>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                            <tbody>
+                                @foreach($members as $member)
+                                    <tr>
+                                        <td>{{$member->name}}</td>
+                                        <td>{{$member->phone_number}}</td>
+                                        <td>{{$member->group}}</td>
+                                        <td>
+                                            <form method="POST" action="{{route('members.destroy',$member->id)}}">
+                                                @csrf 
+                                                {{method_field('DELETE')}}
+                                                <a href="{{route('members.edit',$member->id)}}" class="badge badge-primary p-1">Edit</a>
+                                                <button type="submit" class="badge badge-danger p-1">Delete</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
 
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg" role="document">
