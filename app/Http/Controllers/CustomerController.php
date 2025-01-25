@@ -16,7 +16,7 @@ class CustomerController extends Controller
     {
         $members = Customer::get();
 
-        $groups = ["A","B","C"];
+        $groups = ["A","B","C","D","E","F",'G'];
 
         $data = [
             'members'=>$members,
@@ -35,7 +35,7 @@ class CustomerController extends Controller
     public function create()
     {
 
-        $groups = ["A","B","C"];
+        $groups = ["A","B","C","D","E","F",'G'];
 
         $data = [
             'groups'=>$groups

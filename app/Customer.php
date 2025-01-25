@@ -22,11 +22,13 @@ class Customer extends Model
 
             $phone_number="256".$out;
 
-        }else{
+        } elseif ($phone[0]=="7")
+
+            $phone_number="256".$phone;
+
+        else
 
             $phone_number=$phone;
-
-        }
 
         $phone_number = str_replace(" ","",$phone_number);
 
