@@ -12,3 +12,5 @@ Route::get('clean_phone','CustomerController@cleanPhone');
 Auth::routes();
 
 Route::get('/', 'CustomerController@index');
+
+Route::resource('import_data','ImportDataController');

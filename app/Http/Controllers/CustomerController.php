@@ -14,9 +14,8 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        $members = Customer::get();
-
-        $groups = ["A","B","C","D","E","F",'G'];
+        $members = Customer::get();     
+        $groups =  array_unique(Customer::pluck('group')->toArray());
 
         $data = [
             'members'=>$members,
@@ -35,7 +34,7 @@ class CustomerController extends Controller
     public function create()
     {
 
-        $groups = ["A","B","C","D","E","F",'G'];
+        $groups =  ["A","B","C","D","E","F",'G'];
 
         $data = [
             'groups'=>$groups

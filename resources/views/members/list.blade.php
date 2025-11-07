@@ -5,11 +5,17 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card-header">{{ __('Dashboard') }}</div>
+            <br> <br>
             <a href="{{route('members.create')}}" class="btn btn-success">Create member</a>
 
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                 Compose message
             </button>
+
+            <a href="{{route('import_data.create')}}" class="btn btn-success">Import contacts</a>
+
+            <a href="{{route('import_data.index')}}" class="btn btn-danger">Delete All contact</a>
+
             <hr>
             <div class="card">              
                 <div class="card-body">
