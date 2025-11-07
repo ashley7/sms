@@ -61,12 +61,12 @@ class Customer extends Model
 
         if(empty($phone_number)) return;
 
-        $phone = User::validatePhoneNumber($phone_number); 
+        $phone = Customer::validatePhoneNumber($phone_number); 
         
         $username = env("SMSUSERNAME");
         $pass   = env("SMSAPIKEY"); //password 
         
-        $token = User::getSmSToken($username, $pass); 
+        $token = Customer::getSmSToken($username, $pass); 
 
         if (!$token) return;
 
